@@ -1,375 +1,260 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Utilities</title>
+    
 </head>
+
+
 <body>
     <div style="background-color: rgb(36, 36, 36); border-radius: 20px; font-optical-sizing: auto;
     font-weight: 500; font-style: normal; font-variation-settings: 'width' 100; width: 80%; margin: 0 auto;">
         <!-- main -->
-    
+
         <h1
             style="margin-top: 0px; font-size: 80px; padding: 30px; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
             Node Utilities</h1>
-    
+
         <div style="margin-top: 40px; text-align: center; max-width: 80% ; margin-left: auto; margin-right: auto;">
-            <h3 style="color: #f3f3f3;">This addon provides a pie menu that groups together several useful node operations.
+            <h3 style="color: #f3f3f3;">このアドオンは、ノードに関する多数の機能をまとめたものです。
             </h3>
-            <h3 style="color: #f3f3f3;">It has a wide range of functions such as align, distribute, flip, node search,
-                coloring, etc.</h3>
-            <h4 style="color: #f3f3f3;">Versions 1.6.1 and above are compatible with Blender 3.4 and above.</h4>
+            <h3 style="color: #f3f3f3;">整列、反転、等間隔に配置、ノード検索、色設定などの幅広い機能があります。</h3>
+            <h4 style="color: #f3f3f3;">バージョン1.6.1以上は、Blender3.4以上対応です。</h4>
             <br>
-    
+            <h4 style="color: #f3f3f3;">BlenderのUIを日本語にしていると、このアドオンのUIも日本語になります。</h4>
+
         </div>
-    
+
         <!-- how to use -->
         <h2
             style="font-size: xxx-large; padding: 30px 0; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
-            How to use</h2>
-    
-    
+            使用方法</h2>
+
+
         <h3 style="margin: 30px auto; text-align: center; color: #f3f3f3; max-width: 80%;">
             <ul style="padding-left: 0; display: inline-block; line-height: 30px;">
-                <li style="text-align: left; margin: 10px 0;">Go to Compositor, Shader Editor or Geometry Node Editor.</li>
+                <li style="text-align: left; margin: 10px 0;">コンポジター、シェーダーエディター、ジオメトリノードエディターのいずれかを開きます。</li>
                 <ul>
-                    <li style="text-align: left; margin: 10px 0;">Press D on them to open utility pie menu, or E to open
-                        selection pie menu.<br>
-                    <li style="text-align: left; margin: 10px 0;">Press Shift z or Shift x on them to change width of
-                        selected nodes.<br>
-                    <li style="text-align: left; margin: 10px 0;">Press Shift Ctrl Alt D on them to duplicate and unparent
-                        selected nodes.<br>
+                    <li style="text-align: left; margin: 10px 0;">Dキーでユーティリティメニューを開き、Eキーで選択メニューを開きます。<br>
+                    <li style="text-align: left; margin: 10px 0;">Shift Zキー、Shift Xキーで選択中のノードの幅を変更します。<br>
+                    <li style="text-align: left; margin: 10px 0;">Shift Ctrl Alt Dキーで、選択中のノードをフレームから外して複製します。</li><br>
                 </ul>
-                <li style="text-align: left; margin: 10px 0;">Press Shift E on Geometry Node Editor to toggle viewer on and
-                    off.<br>
+                <li style="text-align: left; margin: 10px 0;">ジオメトリノードエディター上でShift Eキーで、ビューワーのオンオフを切り替えます。<br>
             </ul>
         </h3>
-    
-    
-    
-    
+
+
+
+
         <!-- Functions -->
         <h2
             style="font-size: xxx-large; padding: 30px 0; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
-            Functions</h2>
+            搭載機能</h2>
         <div style="margin: 16px auto; text-align: center; color: #f3f3f3;">
-    
+
             <!-- Node Utility Pie Menu -->
             <h1 style="margin-top: 80px; font-size: xx-large; font-weight: bold; padding: 10px; text-align: center;">
                 <span style="display: inline-block; width: 90%; padding: 25px 20px; border-radius:  200px; 
                                  background: linear-gradient(to right,#168aad 0%, #1a759f 100%); text-align: center;">
-                    Node
-                    Utility Pie Menu
+                    ノードユーティリティパイメニュー
                 </span>
             </h1>
             <div style="margin: 16px auto; text-align: center; max-width: 90%;">
                 <img src="https://assets.superhivemarket.com/cache/42bafacdd2c764bc955756d5732481df.png"
                     style="border-color: #818181; border-width: 1px; border-style: solid;">
             </div>
-            <p style="margin: 16px auto; text-align: center; max-width: 80%;">The functions that can be used vary depending
-                on the node or frame selected.</p>
-    
-    
+            <p style="margin: 16px auto; text-align: center; max-width: 80%;">使用可能な機能は、ノードとフレームの選択状態によって変わります。</p>
+
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto;">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Align / Flip
-                / Distribute
+                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>整列 / 反転
+                / 等間隔に配置
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
             <br>
             <ul style="margin: 16px auto; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
-                <li style="text-align: left;">Align X: Align selected nodes along the x-axis(same as press S > X >
-                    0).</li>
-                <li style="text-align: left;">Align Y: Align selected nodes along the y-axis(same as press S > Y >
-                    0).</li>
-                <li style="text-align: left;">Flip X: Flip selected nodes' x location(same as press S > X > -1).
-                </li>
-                <li style="text-align: left;">Flip Y: Flip selected nodes' x location(same as press S > Y > -1).
-                </li>
-                <li style="text-align: left;">Distribute X: Arrange the selected nodes evenly along the x-axis.</li>
-                <li style="text-align: left;">Distribute Y: Arrange the selected nodes evenly along the y-axis.</li>
+                <li style="text-align: left;">X軸方向に整列: 選択しているノードをX軸方向に整列させます(S → X → 0と同様です)。</li>
+                <li style="text-align: left;">Y軸方向に整列: 選択しているノードをY軸方向に整列させます(S → Y → 0と同様です)。</li>
+                <li style="text-align: left;">X軸方向に反転: 選択しているノードの位置をX軸方向に反転させます(S → X → -1と同様です)。</li>
+                <li style="text-align: left;">Y軸方向に反転: 選択しているノードの位置をY軸方向に反転させます(S → Y → -1と同様です)。</li>
+                <li style="text-align: left;">X軸方向に等間隔: 選択しているノードをX軸方向に等間隔に配置させます。</li>
+                <li style="text-align: left;">Y軸方向に等間隔: 選択しているノードをY軸方向に等間隔に配置させます。</li>
             </ul>
-    
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Coloring
+                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>色設定
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
-    
+
             <ul style="margin: 16px auto; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
-                <li style="text-align: left;">Set Fav Color: Changes the color of the selected nodes and frames to
-                    the color specified in preferences.</li>
-                <li style="text-align: left;">Use Color Off: Turn off Use Color for the selected nodes and frames.
-                </li>
-                <li style="text-align: left;">Color Input: Changes the color of the selected nodes and frames to the
-                    its color.</li>
-                <li style="text-align: left;">Paste Color of Active Node: Applies the active node or frame color to
-                    all selections.</li>
+                <li style="text-align: left;">お気に入りの色に設定: 選択しているノードとフレームを、プリファレンスで設定したお気に入りの色に変更します。</li>
+                <li style="text-align: left;">カラーをオフ: 選択しているノードとフレームのカラーをオフにします。</li>
+                <li style="text-align: left;">カラーインプット: 選択しているノードとフレームの、その色に変更します。</li>
+                <li style="text-align: left;">アクティブなノードの色を貼り付け: アクティブなノードまたはフレームの色を、選択中のノードとフレームに適用します。</li>
             </ul>
-    
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Labeling
+                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>ラベリング
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
-    
+
             <ul style="margin: 16px auto; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
-                <li style="text-align: left;">Labeling with Node Name: Changes the label of a node depending on its
-                    name or operation.<br>
-                    Math, Vector Math, Boolean Math, Compare, and Mix Color nodes are named according to their
-                    operation.</li>
-                <li style="text-align: left;">Label Size: Changes the label size of the selected frames.<br>
-                    Min: Set to 8 / Half: Set to 36 / Max: Set to 64 / Number: Set to its number.</li>
+                <li style="text-align: left;">ノード名から名前を変更: ノードのラベルを、その名前もしくはその処理に応じて変更します。<br>
+                    数式、ベクトル演算、ブール演算、比較、カラーミックスが、その処理に応じたラベルに変更されます。</li>
+                <li style="text-align: left;">ラベルサイズ: 選択しているフレームのラベルの大きさを変更します。<br>
+                    最小: 8に変更 / 半分: 36に変更 / 最大: 64に変更 / 数字: その数に変更</li>
             </ul>
-    
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Connect Last
-                to Output (Geometry Nodes only)
+                <span
+                    style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>最後のノードをアウトプットに接続
+                (ジオメトリノードエディターのみ)
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
             <ul style="margin: 16px auto; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
-                <li style="text-align: left;">Connect Last to Output: Connects the specified node to the output.<br>
-                    For large node groups, you can sometimes use Shift Alt LMB to connect intermediate states to the
-                    output to check them.<br>
-                    This makes it easy to connect a last node back into an output node again.</li>
-                <li style="text-align: left;">Set Active Node to Last: Specify the active node as the Last Node.
-                </li>
+                <li style="text-align: left;">指定したノードをアウトプットに接続<br>
+                    ノードグループが大きくなっている場合、Shift Alt 左クリックで途中の状態を確認することがあるかと思います。<br>
+                    その状態から、最後のノードを再びアウトプットにつなげなおすのに役立ちます。</li>
+                <li style="text-align: left;">アクティブなノードを最終ノードに設定: アクティブなノードを、最後のノードとして設定します。</li>
             </ul>
-    
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Search Node
+                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>ノードを検索
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
-            <p style="margin: 16px auto; text-align: center; max-width: 80%;">Search Node: Search a node by its
-                name and the name of its connected output socket.<br>
-                Search a node by the name of its output socket is useful when a node group has multiple Group
-                Inputs.</p>
-    
+            <p style="margin: 16px auto; text-align: center; max-width: 80%;">ノードを検索:
+                名前と、つながっているアウトプットの名前から、ノードを検索します。<br>
+                グループインプットが複数ある場合、つながっているアウトプットの名前から、検索するのが役立ちます。</p>
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
                 font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Zoom
+                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>ズーム
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
-            <p style="margin: 16px auto; text-align: center; max-width: 80%;">Zoom: Zoom to setected nodes or
-                frames by zoom level specified in preferences.<br>
-                This is useful because the period key does not zoom when you have a single node selected.<br>
-                <span style="font-weight: bold;">Note that it will not zoom exactly to the zoom level specified in
-                    the preferences.</span>
+            <p style="margin: 16px auto; text-align: center; max-width: 80%;">ズーム:
+                選択しているノードまたはフレームに対して、プリファレンスで設定されたレベルでズームします。<br>
+                Blender標準のピリオドキーでのズームは、ノードを一つだけ選択しているとズームしてくれないので、これが役立ちます。<br>
+                <span style="font-weight: bold;"> プリファレンスで設定した値に正確にズームするわけではないことに注意してください。</span>
             </p>
-    
+
             <div style="font-size: 21px; display: flex; align-items: center; justify-content: center; width: 80%; 
              font-weight: bold; margin: 50px auto 0 auto">
-                <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>Hide
-                unconnected socket for same type
+                <span
+                    style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-right: 10px;"></span>同タイプのノードに対する接続されていないソケットを隠す
                 <span style="flex-grow: 1; height: 1px; background-color: #f3f3f3; margin-left: 10px;"></span>
             </div>
-            <p style="margin: 16px auto; text-align: center; max-width: 80%;">Hide unconnected socket for same
-                type: Hide unconnected socket for same type of the active node.<br>
-                This is especially useful if you have multiple group inputs.</p>
+            <p style="margin: 16px auto; text-align: center; max-width: 80%;">同タイプのノードに対する接続されていないソケットを隠す:
+                アクティブなノードと同じタイプのノードの、つながっていないソケットを隠します。<br>
+                複数のグループインプットがある場合に特に便利です。</p>
             <br>
             <!-- Selection Pie Menu-->
             <h1 style="margin-top: 80px; font-size: xx-large; font-weight: bold; padding: 10px; text-align: center;">
-                <span style="display: inline-block; width: 90%; padding: 25px 20px; border-radius: 200px; 
-                             background: linear-gradient(to right,#168aad 0%, #1a759f 100%); text-align: center;">
-                    Selection
-                    Pie Menu
-                </span>
+                <span
+                    style="display: inline-block; width: 90%; padding: 25px 20px; border-radius: 200px; 
+                             background: linear-gradient(to right,#168aad 0%, #1a759f 100%); text-align: center;">選択パイメニュー</span>
             </h1>
             <div style="margin: 16px auto; text-align: center; max-width: 80%;">
                 <img src="https://assets.superhivemarket.com/cache/770e6750941070b2b509a52f13c1cb02.png"
                     style="border-color: #818181; border-width: 1px; border-style: solid;">
-                <p>Selects nodes in each direction from the mouse position when the key is pressed.<br>
-                    If you turn on Select Frame, it will also select the frame.</p>
+                <p>キーが押された時点でのマウスの位置を基準に、それぞれの方向にあるノードを選択します。<br>
+                    "フレームも選択"をオンにすると、フレームも選択されるようになります。</p>
                 <br>
             </div>
-    
-    
+
+
             <!-- Others-->
             <h1 style="margin-top: 80px; font-size: xx-large; font-weight: bold; padding: 10px; text-align: center;">
                 <span style="display: inline-block; width: 90%; padding: 25px 20px; border-radius: 200px; 
                                 background: linear-gradient(to right,#168aad 0%, #1a759f 100%); text-align: center;">
-                    Others
+                    その他
                 </span>
             </h1>
-    
-    
+
+
             <div style="margin: 16px auto; text-align: center; max-width: 80%;">
-                <ul style="margin-bottom: 50px; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
-                    <li style="text-align: left;">Increase / Decrease Node Width: Shift x / Shift z keys will increase
-                        or
-                        decrease the width of the selected node.<br>
-                        The shortcut keys and node width increment/decrement value can be changed in the preferences.
-                    </li>
-                    <li style="text-align: left;">Toggle Viewer: Shift e toggles the viewer on and off (Geometry Nodes
-                        only)<br>
-                        This works when there is only one viewer.</li>
-                    <li style="text-align: left;">Duplicate and Unparent: Shift Ctrl Alt d to duplicate and unparent
-                        selected nodes.</li>
+                <ul
+                    style="margin-bottom: 50px; padding-left: 0; display: inline-block; line-height: 30px; max-width: 80%;">
+                    <li style="text-align: left;">ノードの幅を増減: Shift X、Shift Zキーで選択しているノードの幅を変更します。<br>
+                        ショートカットキーと増減の量は、プリファレンスで変更できます。</li>
+                    <li style="text-align: left;">ビューワーのオンオフ切り替え: Shift Eキーで、ビューワーのオンオフを切り替えます。<br>
+                        ビューワーが一つだけあるときのみ有効です。</li>
+                    <li style="text-align: left;">フレームから外して複製: Shift Ctrl Alt Dキーで、選択中のノードをフレームから外して複製します。</li>
                 </ul>
             </div>
         </div>
-    
-    
-    
+
+
+
         <!-- Preferences -->
         <h2
             style="font-size: xxx-large; padding: 30px 0; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
-            Preferences</h2>
+            プリファレンス</h2>
         <div style="margin: 16px auto; text-align: center; color: #f3f3f3; max-width: 80%;">
-            <p>You can change the shortcut keys.</p>
+            <p>ショートカットキーを変更できます。</p>
             <div style="margin: 16px auto; text-align: center; max-width: 80%;">
                 <img src="https://assets.superhivemarket.com/cache/6b5ee01cee0f4651fee2dd9fad58d50c.png"
                     style="border-color: #818181; border-width: 1px; border-style: solid;">
             </div>
-            <p>You can change the following items:</p>
+            <p style="margin-bottom: -12px;">以下を変更できます</p>
             <ul style="padding-left: 0; display: inline-block; line-height: 30px;">
-                <li style="text-align: left;">Width Additinal Amount: node width increment/decrement value.<br>
-                    Node width increment/decrement values.
-                </li>
-                <li style="text-align: left;">Select Frame: Whether to select frames in the Selection Pie Menu.</li>
-                <li style="text-align: left;">Fav Color: Colors used in Set Fav Color.</li>
-                <li style="text-align: left;">Auto Zoom: Whether to automatically zoom after searching a node.</li>
-                <li style="text-align: left;">Zoom Level: Higher values zoom more.</li>
+                <li style="text-align: left;">変更幅: ノードの幅を増減する量。</li>
+                <li style="text-align: left;">フレームも選択: 選択パイメニューでフレームも選択するかどうか。</li>
+                <li style="text-align: left;">お気に入りの色: "お気に入りの色に設定"で使用する色。</li>
+                <li style="text-align: left;">自動ズーム: ノードを検索した後に、自動でそのノードにズームするか。</li>
+                <li style="text-align: left;">ズームレベル: 値が大きいほどズームします。</li>
             </ul>
             <div style="margin: 16px auto; text-align: center; max-width: 80%;">
                 <img src="https://assets.superhivemarket.com/cache/0886a66a641b4c9c8bc5a63fdf715c74.png"
                     style="border-color: #818181; border-width: 1px; border-style: solid;">
             </div>
         </div>
-    
-    
+
+
         <!-- installation -->
         <h2
             style="font-size: xxx-large; padding: 30px 0; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
-            Installation</h2>
-    
+            インストール方法</h2>
+
         <div style="text-align: center; color:#f3f3f3; max-width: 80% ; margin: 20px auto 0 auto;">
-            For Blender4.2 or higher
+            Blender4.2以上
         </div>
         <div style="margin: 0px auto; text-align: center; color: #f3f3f3; max-width: 80%;">
             <ul style="padding-left: 0; display: inline-block;">
-                <li style="text-align: left;">download zip file, do not unzip it.</li>
-                <li style="text-align: left;">go to Blender's user preference,open the "Add-ons" or "Get Extensions" tab
-                </li>
-                <li style="text-align: left;">click "Install from Disk" from downward arrow at right up and select the zip
-                    file.</li>
+                <li style="text-align: left;">zipファイルをダウンロード(解凍する必要はありません)</li>
+                <li style="text-align: left;">編集→プリファレンス→”アドオン”または”エクステンションを入手”タブ</li>
+                <li style="text-align: left;">右上の下向き矢印から、ディスクからインストールをクリック</li>
+                <li style="text-align: left;">ダウンロードしたzipファイルを選択</li>
             </ul>
         </div>
-    
+
         <div style="text-align: center; color:#f3f3f3; max-width: 80% ; margin: 20px auto 0 auto;">
-            For Blender4.1 or lower
+            Blender4.1以下
         </div>
         <div style="margin: 0 auto 50px auto; text-align: center; color: #f3f3f3; max-width: 80%;">
             <ul style="padding-left: 0; display: inline-block;">
-                <li style="text-align: left;">download zip file, do not unzip it.</li>
-                <li style="text-align: left;">go to Blender's user preference,open the Add-ons tab</li>
-                <li style="text-align: left;">click Install and select the zip file.</li>
-                <li style="text-align: left;">check the box next to its name to enable it.</li>
+                <li style="text-align: left;">zipファイルをダウンロード(解凍する必要はありません)</li>
+                <li style="text-align: left;">編集→プリファレンス→アドオン</li>
+                <li style="text-align: left;">インストールをクリックし、zipファイルを選択</li>
+                <li style="text-align: left;"> チェックボックスにチェックを入れる</li>
             </ul>
-        </div><!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Progate</title>
-          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-          <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        </head>
-        <body>
-          <header>
-            <div class="container">
-              <div class="header-left">
-                <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-              </div>
-              <span class="fa fa-bars menu-icon"></span>
-              <div class="header-right">
-                <a href="#">レッスン</a>
-                <a href="#">新規登録</a>
-                <a href="#" class="login">ログイン</a>
-              </div>
-            </div>
-          </header>
-          <div class="top-wrapper">
-            <div class="container">
-              <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-              <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-              <div class="btn-wrapper">
-                <a href="#" class="btn signup">新規登録はこちら</a>
-                <p>or</p>
-                <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-                <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-              </div>
-            </div>
-          </div>
-          <div class="lesson-wrapper">
-            <div class="container">
-              <div class="heading">
-                <h2>Learn Where to Get Started!</h2>
-              </div>
-              <div class="lessons">
-                <div class="lesson">
-                  <div class="lesson-icon">
-                    <img src="https://prog-8.com/images/html/advanced/html.png">
-                    <p>HTML & CSS</p>
-                  </div>
-                  <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-                </div>
-                <div class="lesson">
-                  <div class="lesson-icon">
-                    <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-                    <p>jQuery</p>
-                  </div>
-                  <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-                </div>
-                <div class="lesson">
-                  <div class="lesson-icon">
-                    <img src="https://prog-8.com/images/html/advanced/ruby.png">
-                    <p>Ruby</p>
-                  </div>
-                  <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-                </div>
-                <div class="lesson">
-                  <div class="lesson-icon">
-                    <img src="https://prog-8.com/images/html/advanced/php.png">
-                    <p>PHP</p>
-                  </div>
-                  <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-          </div>
-          <div class="message-wrapper">
-            <div class="container">
-              <div class="heading">
-                <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-                <h3>Let's learn to code, learn to be creative!</h3>
-              </div>
-              <span class="btn message">さっそく開発する</span>
-            </div>
-          </div>
-          <footer>
-            <div class="container">
-              <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-              <p>Learn to Code, Learn to be Creative.</p>
-            </div>
-          </footer>
-        </body>
-        </html>
-    
-    
-    
+        </div>
+
+
         <!-- Update -->
         <h2
             style="font-size: xxx-large; padding: 30px 0; font-weight: bold; text-align: center; background: linear-gradient(to right, #FFA348, #EC6628); color: #363636;">
-            Update</h2>
-    
-        <div style="text-align: center; color: #f3f3f3; margin: auto; margin-bottom: 30px; max-width: 80%; display: block;">
+            アップデート履歴</h2>
+
+        <div
+            style="text-align: center; color: #f3f3f3; margin: auto; margin-bottom: 30px; max-width: 80%; display: block;">
             <table style="margin: auto; text-align: left; border-collapse: collapse;">
                 <tbody>
                     <tr>
@@ -378,7 +263,7 @@
                                 <span>2.0.1</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Duplicate and Unparent works with selected multiple nodes now.</td>
+                        <td>フレームから外して複製は複数のノードに対して有効になりました</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 1rem; vertical-align: top;">
@@ -386,9 +271,9 @@
                                 <span>2.0.0</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>The UI has been changed.<br>
-                            Align X now aligns along the X axis, and Align Y now aligns along the Y axis.<br>
-                            The default shortcut key for the Node Utility Pie Menu has been changed to D.
+                        <td>UIを変更しました<br>
+                            X軸方向に整列、Y軸方向に整列の向きが変わりました<br>
+                            ノードユーティリティパイメニューのデフォルトのショートカットキーがDになりました。
                         </td>
                     </tr>
                     <tr>
@@ -397,7 +282,7 @@
                                 <span>1.6.2</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Small bug fix.</td>
+                        <td>細かいバグ修正</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 1rem; vertical-align: top;">
@@ -405,8 +290,8 @@
                                 <span>1.6.1</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Added mute / unmute geometry node viewer function.<br>
-                            "Change node width" affects multiple nodes now.
+                        <td>ビューワーのオンオフ機能を追加<br>
+                            ノードの幅を変更機能が複数のノードに対して有効になりました
                         </td>
                     </tr>
                     <tr>
@@ -415,7 +300,7 @@
                                 <span>1.5.1</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Search function can be used in node group now.</td>
+                        <td>ノード検索が、ノードグループに対して有効になりました</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 1rem; vertical-align: top;">
@@ -423,9 +308,9 @@
                                 <span>1.5.0</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Fix bug.<br>
-                            Added "search node" function.<br>
-                            Added "connect last node to output" function.
+                        <td>バグ修正<br>
+                            ノード検索機能を追加<br>
+                            最後のノードをアウトプットに接続機能を追加
                         </td>
                     </tr>
                     <tr>
@@ -434,7 +319,7 @@
                                 <span>1.4.3</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Selection pie menu now opens only on node editor.</td>
+                        <td>選択パイメニューがノードエディターでのみ有効になりました</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 1rem; vertical-align: top;">
@@ -442,7 +327,7 @@
                                 <span>1.4.2</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>Fix bug for change color.</td>
+                        <td>色変更のバグ修正</td>
                     </tr>
                     <tr>
                         <td style="padding-right: 1rem; vertical-align: top;">
@@ -450,27 +335,28 @@
                                 <span>1.4.1</span><span style="margin-left: 0.5rem;"></span>
                             </div>
                         </td>
-                        <td>"Set Fav Color" and color change from color input now affect all selected nodes.<br>
-                            Small bug fix.
+                        <td>お気に入りの色に設定とカラーインプットが複数のノードに対して有効になりました<br>
+                            細かいバグ修正
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    
-    
-    
+
+
+
         <div style="background-color: #f3f3f3; padding-bottom: 20px;">
             <p
                 style="font-size: large; font-weight: bold; text-align: center; max-width: 80%; padding-top: 20px; margin: auto; color: #2c2c2c;">
                 sum studio</p>
             <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-                <a href="https://twitter.com/boc_fob" target="_blank" rel="noopener noreferrer" style="margin-right: 20px;">
+                <a href="https://twitter.com/boc_fob" target="_blank" rel="noopener noreferrer"
+                    style="margin-right: 20px;">
                     <img src="https://assets.superhivemarket.com/cache/591717d03f1cdd6d2bbb052a52cb8cfa.png"
                         alt="sum studio x" style="width: 80px; height: auto;">
                 </a>
-                <a href="https://www.youtube.com/channel/UCzFITeATkQiVA_wpuqnhmQw" target="_blank" rel="noopener noreferrer"
-                    style="margin-right: 20px;">
+                <a href="https://www.youtube.com/channel/UCzFITeATkQiVA_wpuqnhmQw" target="_blank"
+                    rel="noopener noreferrer" style="margin-right: 20px;">
                     <img src="https://assets.superhivemarket.com/cache/4f38b7be60e6f88a8900e4d39fc52189.png"
                         alt="sum studio YouTube" style="width: 80px; height: auto;">
                 </a>
@@ -485,9 +371,10 @@
                 </a>
             </div>
         </div>
-    
+
         <br>
         <br>
     </div>
 </body>
+
 </html>
